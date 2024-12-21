@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Animation Projects Slideshow */
+        /* Animation Projects Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+    position: relative; /* Ensure the caption can be positioned within the slide */
+}
+
+.slide img,
+.slide video {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure videos/images occupy full container */
+}
+
+/* Ensure caption appears over the video */
+.caption {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    z-index: 2; /* Make sure it stays on top of the video */
+}
+
+/* Show the caption when the slide is hovered */
+.slide:hover .caption {
+    opacity: 1; /* Fade in caption on hover */
+}
+
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Editing Projects - Side by side images */
+        .portfolio-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-item {
+            position: relative;
+            width: 30%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .caption {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">My Biodata</a></li>
+                <li><a href="portfolio.html" class="active">My Portfolio</a></li>
+                <li><a href="video.html">My Video</a></li>
+                <li><a href="comments.html">Your Comments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Animation Projects -->
+        <div class="section">
+            <h2>Animation Projects</h2>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <video src="images/animation1.mp4" controls></video>
+                    <div class="caption">This is an animation of walking man I did</div>
+                </div>
+                <div class="slide">
+                    <video src="images/animation2.mp4" controls></video>
+                    <div class="caption">This is animation of camera position that follows a path</div>
+                </div>
+                <div class="slide">
+                    <video src="images/animation3.mp4" controls></video>
+                    <div class="caption">This is the lighting animation of room where I changed the lighting effects according to flickering</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Poster Editing Projects -->
+        <div class="section">
+            <h2>Editing Projects</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="images/poster1.png" alt="Poster Project 1">
+                    <div class="caption">This is the cover page of an ebook I designed for group a project about FKI </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/poster2.png" alt="Poster Project 2">
+                    <div class="caption">This is a poster titled Rasuah for a group project I designed</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/poster3.png" alt="Poster Project 3">
+                    <div class="caption">This is a poster I designed for our group business for APK</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Oviyameenhaa. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex % slides.length) ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

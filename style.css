@@ -1,0 +1,424 @@
+/* Homepage */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header(home) */
+header {
+    background: rgba(1, 59, 34, 0.9); /* Semi-transparent for better visibility */
+    color: #b8fba5;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 3px solid rgb(111, 247, 111); 
+}
+
+nav ul li a:hover {
+    background: #82da86;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content-home*/
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+    padding: 20px 40px; /* Adjust padding for spacing */
+    text-align: left;
+}
+
+.welcome-section {
+    background: #b8fba5(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto 0; /* Align to the left side */
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+.typing-animation {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    margin: 20px 0;
+    color: #4CAF50;
+}
+
+.typing-animation span {
+    color: #f67b2f;
+}
+
+/* Additional Text-home*/
+.welcome-text {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Buttons home */
+button.view-more {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.view-more:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: rgba(1, 59, 34, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Biodata Page */
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center-align items vertically */
+    padding: 20px; /* Adjust padding for spacing */
+    text-align: center; /* Center text alignment */
+}
+/* Full-Width Hero Section */
+.intro-section {
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.text-overlay h2 span {
+    color: #4CAF50;
+    font-style: italic;
+}
+/* General Reset for Full Width */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+ 
+/* Intro Section */
+.intro-section {
+    background-color: #b8fba5; /* Clean light background */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap; /* Responsive layout for smaller screens */
+    align-items: center;
+    max-width: 1200px; /* Centered content within large screens */
+    width: 100%;
+    gap: 20px;
+}
+
+.intro-photo {
+    width: 150px; /* Manageable size */
+    height: 150px;
+    border-radius: 50%; /* Circular photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.intro-text {
+    flex-grow: 1; /* Allow the text to grow naturally */
+    text-align: left;
+}
+
+.intro-text h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.intro-text h2 span {
+    color: #4CAF50;
+    font-style: italic;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+
+/* Biodata Section */
+.biodata-section {
+    background: #f0f9f0;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%; /* Ensure it spans full width */
+    padding: 0 10px; /* Small padding for breathing room */
+}
+
+.biodata-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.biodata-item:hover {
+    transform: scale(1.05);
+}
+
+/* Full-Width Button */
+button.explore-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.explore-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* General Styling */
+.personal-info {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Info Row (Side-by-Side Layout) */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.info-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-box {
+    position: relative;
+    width: 32%; /* Adjust width to fit 3 images side by side */
+}
+
+.image-box img {
+    width: 100%;
+    height: 250px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio without distortion */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.image-box:hover .image-caption {
+    opacity: 1;
+}
+
+/* Map Section */
+.map-container iframe {
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+}
+/* AR Section */
+.video-gallery {
+    display: flex; /* Aligns the items horizontally */
+    justify-content: space-between; /* Distributes space between the videos */
+    gap: 20px; /* Adds space between the videos */
+    margin-bottom: 40px;
+}
+
+.video-item {
+    width: 32%; /* Ensures each video takes up about one-third of the width */
+    text-align: center; /* Centers the text below the video */
+}
+
+.video-item iframe {
+    width: 100%; /* Makes iframe responsive within its container */
+    height: 180px; /* Maintains consistent height for all videos */
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+.video-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+

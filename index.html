@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to the center */
+    justify-content: center; /* Center content vertically */
+    padding: 20px 40px;
+    text-align: center; /* Center text */
+}
+/* Profile Image */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space between the image and typing animation */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section */
+h2 {
+    color: #4CAF50;
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button.view-more {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.view-more:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+</style>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="biodata.html">My Biodata</a></li>
+                <li><a href="portfolio.html">My Portfolio</a></li>
+                <li><a href="video.html">My Video</a></li>
+                <li><a href="comments.html">Your Comments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Add your image here -->
+        <div class="profile-container">
+            <img src="images/home4.jpg" alt="Your Image" class="profile-image">
+        </div>
+
+        <div class="typing-animation">
+            I'm <span></span>
+        </div>
+        <h2>Welcome!</h2>
+        <p>Whether you're here to learn more about me, explore my portfolio, 
+            or check out some of the videos I've created, this space has something for everyone.
+            As a multimedia student with a keen interest in computer graphics, 
+            AR, and editing, I’ve created this site to showcase the variety of work and experiences I've gained over the years</p>
+        <button class="view-more" onclick="window.location.href='biodata.html';">View More</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Oviyameenhaa. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
